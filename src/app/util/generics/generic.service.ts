@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Pageable, PageableConstants } from './pageable.model';
-import { tap } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -29,9 +29,9 @@ export abstract class GenericService<T> {
     if (filter) {
       filter = encodeURI(`&q=${filter}`);
     }
-    return this.http.get<Pageable<T>>(`${this.objectUrl}?page=${page-1}${filter}${extras}`)
+    return this.http.get<Pageable<T>>(`${this.objectUrl}?page=${page - 1}${filter}${extras}`)
     .pipe(
-      tap((response: Pageable<T>) => response ? response : UtilFunctions.deepClone(PageableConstants.EMPTY_PAGEABLE)));
+      map((response: Pageable<T>) => response ? response : UtilFunctions.deepClone(PageableConstants.EMPTY_PAGEABLE)));
   }
 
   /**
