@@ -1,77 +1,53 @@
 <footer class="footer">
   <div class="content">
     <div class="columns">
+      <!-- left Column -->
       <div class="column is-3">
-        <p class="bd-footer-link-title">
-          <a>Inicio</a>
-        </p>
+        <p class="click">Inicio</p>
+        <p class="click">Proyectos</p>
+        <p class="click">Blog</p>
+        <p class="click">Nosotros</p>
 
-        <p class="bd-footer-link-title">
-          <a>Proyectos</a>
-        </p>
-
-        <p class="bd-footer-link">
-          <a>
-            Blog
+        <span class="icon">
+          <a
+            target="_blank"
+            href="http://bit.ly/Dahez-Instagram"
+            class="navbar-item"
+          >
+            <i class="fab fa-instagram"></i>
           </a>
-        </p>
+        </span>
 
-        <p class="bd-footer-link">
-          <a>
-            Nosotros
+        <span class="icon">
+          <a
+            target="_blank"
+            href="http://bit.ly/Dahez-Facebook"
+            class="navbar-item"
+          >
+            <i class="fab fa-facebook-f"></i>
           </a>
-        </p>
-        <p>
-          <span class="icon">
-            <a
-              target="_blank"
-              href="http://bit.ly/Dahez-Instagram"
-              class="navbar-item"
-            >
-              <i class="fab fa-instagram"></i>
-            </a>
-          </span>
-
-          <span class="icon">
-            <a
-              target="_blank"
-              href="http://bit.ly/Dahez-Facebook"
-              class="navbar-item"
-            >
-              <i class="fab fa-facebook-f"></i>
-            </a>
-          </span>
-
-          <span class="icon">
-            <a target="_blank" class="navbar-item">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </span>
-        </p>
+        </span>
       </div>
+      <!-- End of left Column -->
 
+      <!-- Middle Column -->
       <div class="column is-5">
-        <h3 class="has-text-link">
-          Empleos
-        </h3>
-        <p class="has-text-info">
+        <h3 class="has-text-link">Empleos</h3>
+        <p>
           Para aplicar a un trabajo en Soluciones integrales Dahez, envía tu CV
           y carta de recomendación a: ingenieriadahez@gmail.com
         </p>
 
-        <h3 class="has-text-link">
-          Presupuestos
-        </h3>
-        <p class="has-text-link">
-          33-23-115-597
+        <h3 class="has-text-link">Presupuestos</h3>
+        <p>
+          {{ phoneNumb }}
         </p>
       </div>
+      <!-- End of Middle Column -->
 
+      <!-- Right Column -->
       <div class="column is-4">
-        <h3 class="has-text-link">
-          Oficina Principal
-        </h3>
-
+        <h3 class="has-text-link">Oficina Principal</h3>
         <p>
           <a target="_blank" href="https://goo.gl/maps/6n2sLVcvgJ5hWTd29">
             <strong>
@@ -98,18 +74,21 @@
               Teléfono
             </strong>
             <em>
-              33-12-642-603
+              {{ officeNumb }}
             </em>
           </a>
         </p>
       </div>
     </div>
   </div>
+  <!-- End of Right Column -->
 
+  <!-- Bottom Row -->
   <div class="content has-text-centered has-text-grey">
     <p>
       <strong>&copy; 2019 Dahez Soluciones </strong>by Kutli Development |
       kutlidev@gmail.com
     </p>
   </div>
+  <!-- End of Bottom Row -->
 </footer>
