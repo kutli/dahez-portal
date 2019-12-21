@@ -10,12 +10,14 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 // * ngBootstrap
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AboutComponent } from './components/about/about.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    CarouselComponent
+    CarouselComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
