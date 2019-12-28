@@ -1,0 +1,61 @@
+<!-- 
+  activeId: The id of a slide which we want to display initially.
+  interval: Time in ms after which slide moves to next.
+  keyboard: To enable/ disable keyboard interaction, default is set to true.
+  pauseOnHover: Default is set to true, the carousel will stop on mouse hovers.
+  showNavigationArrows: Next and Previous arrow controls can be controlled by providing boolean value. Default is set to true.
+  showNavigationIndicators: Bottom indicators are controlled using this property. Default is set to true.
+  wrap: Property to loop over slides, default is set to true and show the first slide after last.
+-->
+<ngb-carousel
+  [showNavigationArrows]="false"
+  [showNavigationIndicators]="false"
+  interval="1000"
+  [keyboard]="true"
+  [pauseOnHover]="true"
+  [wrap]="true"
+  [activeId]="'slideOne'"
+>
+  <ng-template ngbSlide id="slideOne">
+    <!-- <div class="picsum-img-wrapper"> -->
+    <figure class="image">
+      <img src="assets/img/img4.jpg" alt="Random first slide" />
+    </figure>
+    <!-- </div> -->
+    <div class="carousel-caption">
+      <h3 class="title has-text-white">
+        NEW AI-POWERED SOLAR ESTIMATOR CAN TRANSFORM HOME IMPROVEMENT SECTOR
+      </h3>
+      <p class="subtitle has-text-white-ter">
+        The tool measures individual roofs, determines roof plane directions,
+        and uses an algorithm to suggest appropriate areas for solar panels.
+      </p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide id="slideTwo">
+    <!-- <div class="picsum-img-wrapper"> -->
+    <figure class="image">
+      <img src="assets/img/img5.jpg" alt="Random second slide" />
+    </figure>
+    <!-- </div> -->
+    <div class="carousel-caption">
+      <h3 class="title has-text-white">Second slide label</h3>
+      <p class="subtitle has-text-white-ter">
+        Nulla vitae elit libero, a pharetra augue mollis interdum.
+      </p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide id="slideThree">
+    <!-- <div class="picsum-img-wrapper"> -->
+    <figure class="image">
+      <img src="assets/img/img6.jpg" alt="Random third slide" />
+    </figure>
+    <!-- </div> -->
+    <div class="carousel-caption">
+      <h3 class="title has-text-white">Third slide label</h3>
+      <p class="subtitle has-text-white-ter">
+        Nulla vitae elit libero, a pharetra augue mollis interdum.
+      </p>
+    </div>
+  </ng-template>
+</ngb-carousel>
