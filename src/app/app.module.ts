@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
-import { CarouselComponent } from './components/carousel/carousel.component';
+import { HomeComponent } from './components/home/home.component';
 
 // * ngBootstrap
 
@@ -15,7 +15,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    CarouselComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
