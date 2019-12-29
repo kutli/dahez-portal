@@ -1,69 +1,68 @@
 <nav
   class="navbar"
-  role="navigation"
-  aria-label="main navigation"
 >
-  <div class="navbar-brand">
-    <a class="navbar-item" href="/">
-      <img src="assets/img/logoTN.png" alt="Logo" />
-    </a>
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" routerLink="/">
+        <img src="assets/img/logoTN.png" alt="Logo" />
+      </a>
 
-    <a
-      role="button"
-      class="navbar-burger burger"
-      #navBurger
-      (click)="toggleNavBar()"
-      aria-label="menu"
-      aria-expanded="false"
-      data-target="navbarBasicExample"
-    >
+      <a
+        role="button"
+        class="navbar-burger burger"
+        #navBurger
+        (click)="toggleNavBar()"
+        aria-label="menu"
+        aria-expanded="false"
+        data-target="options"
+      >
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
-    </a>
-  </div>
-
-  <div #navMenu class="navbar-menu">
-    <div class="navbar-end">
-      <a class="navbar-item">
-        Inicio
       </a>
+    </div>
 
-      <a class="navbar-item">
-        Proyectos
-      </a>
+    <div #navMenu class="navbar-menu" id="options">
+      <div class="navbar-end">
+        <a class="navbar-item" routerLink="/">
+          Inicio
+        </a>
 
-      <a class="navbar-item">
-        Blog
-      </a>
+        <a class="navbar-item">
+          Proyectos
+        </a>
 
-      <a class="navbar-item">
-        Nosotros
-      </a>
+        <a class="navbar-item">
+          Blog
+        </a>
 
-      <div class="navbar-item">
-        <span class="icon">
-          <a
-            target="_blank"
-            href="http://bit.ly/Dahez-Instagram"
-            class="navbar-item"
-          >
-            <i class="fab fa-instagram"></i>
-          </a>
-        </span>
-      </div>
-      
-      <div class="navbar-item">
-        <span class="icon">
-          <a
-            target="_blank"
-            href="http://bit.ly/Dahez-Facebook"
-            class="navbar-item"
-          >
-            <i class="fab fa-facebook-f"></i>
-          </a>
-        </span>
+        <a class="navbar-item" routerLink="/about-us">
+          Nosotros
+        </a>
 
+        <div class="navbar-item">
+          <span class="icon">
+            <a
+              target="_blank"
+              href="http://bit.ly/Dahez-Instagram"
+              class="navbar-item"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+          </span>
+        </div>
+        
+        <div class="navbar-item">
+          <span class="icon">
+            <a
+              target="_blank"
+              href="http://bit.ly/Dahez-Facebook"
+              class="navbar-item"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </span>
+        </div>
       </div>
     </div>
   </div>
