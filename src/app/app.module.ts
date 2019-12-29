@@ -10,12 +10,14 @@ import { HomeComponent } from './components/home/home.component';
 // * ngBootstrap
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AboutUsComponent } from './components/about-us/about-us.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
