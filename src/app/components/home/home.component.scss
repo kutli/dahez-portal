@@ -8,6 +8,10 @@
     text-align: left;
 }
 
+.button.is-text {
+    text-decoration: none;
+}
+
 @media (max-width: 760px) {
     .title {
         font-size: 1.5rem;

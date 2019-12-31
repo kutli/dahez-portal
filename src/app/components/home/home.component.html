@@ -46,11 +46,9 @@
     </div>
   </ng-template>
   <ng-template ngbSlide id="slideThree">
-    <!-- <div class="picsum-img-wrapper"> -->
     <figure class="image">
       <img src="assets/img/img6.jpg" alt="Random third slide" />
     </figure>
-    <!-- </div> -->
     <div class="carousel-caption">
       <h3 class="title has-text-white">Third slide label</h3>
       <p class="subtitle has-text-white-ter">
@@ -60,6 +58,13 @@
   </ng-template>
 </ngb-carousel>
 
+<br />
+
+<div class="container has-text-centered">
+  <p class="title">Our Mission</p>
+  <hr />
+</div>
+
 <div class="columns is-centered">
   <div class="card column is-one-third">
     <div class="card-content">
@@ -67,10 +72,21 @@
         “This would be a nice place to put our about us section, yes or na?, JK
         obviously yes!, This is us!.”
       </p>
-      <p class="subtitle">
+      <p class="subtitle has-text-grey">
         Dahez Soluciones
       </p>
     </div>
+    <footer class="card-footer">
+      <p class="card-footer-item">
+        Discover more
+        <button
+          class="button is-text is-rounded has-text-link"
+          [routerLink]="['about-us']"
+        >
+          about us
+        </button>
+      </p>
+    </footer>
   </div>
   <div class="card column is-one-third">
     <div class="card-image">
@@ -78,5 +94,44 @@
         <img src="assets/img/imgC.jpg" alt="Placeholder image" />
       </figure>
     </div>
+  </div>
+</div>
+
+<br />
+
+<div class="container has-text-centered">
+  <p class="title">Our Vision</p>
+  <hr />
+</div>
+
+<div class="columns is-centered">
+  <div class="card column is-one-third">
+    <div class="card-image">
+      <figure class="image is-4by3">
+        <img src="assets/img/img1.jpg" alt="Placeholder image" />
+      </figure>
+    </div>
+  </div>
+  <div class="card column is-one-third">
+    <div class="card-content">
+      <p class="title">
+        “This would be a nice place to put our about us section, yes or na?, JK
+        obviously yes!, This is us!.”
+      </p>
+      <p class="subtitle has-text-grey">
+        Dahez Soluciones
+      </p>
+    </div>
+    <footer class="card-footer">
+      <p class="card-footer-item">
+        Discover more
+        <button
+          class="button is-text is-rounded has-text-link"
+          [routerLink]="['about-us']"
+        >
+          about us
+        </button>
+      </p>
+    </footer>
   </div>
 </div>
