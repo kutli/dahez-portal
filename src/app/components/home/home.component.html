@@ -7,6 +7,7 @@
   showNavigationIndicators: Bottom indicators are controlled using this property. Default is set to true.
   wrap: Property to loop over slides, default is set to true and show the first slide after last.
 -->
+<!-- Begin Carousel -->
 <ngb-carousel
   [showNavigationArrows]="false"
   [showNavigationIndicators]="false"
@@ -57,12 +58,15 @@
     </div>
   </ng-template>
 </ngb-carousel>
+<!-- End Carousel -->
 
-<br />
+<br/>
+
+<!-- Begin Main Content -->
 <div class="container">
   <div class="has-text-right">
     <h1 class="title has-text-centered">Sobre Nosotros</h1>
-    <hr />
+    <hr class="is-orange">
 
     <div class="columns">
       <div class="card column is-one-third">
@@ -74,12 +78,12 @@
       </div>
       <div class="card column is-one-third">
         <div class="card-content">
-          <p class="title">
+          <p class="title is-size-4">
             “Dar el mejor servicio a nuestros clientes con la mas alta calidad y
             garantía de trabajo resolviendo sus necesidades inmobiliarias o
             proyectos.”
           </p>
-          <p class="subtitle has-text-grey">
+          <p class="is-size-6 has-text-grey">
             Dahez Soluciones
           </p>
         </div>
@@ -90,17 +94,17 @@
   <br />
 
   <div class="has-text-left">
-    <hr />
+    <hr>
 
     <div class="columns ">
       <div class="card column is-one-third is-offset-4">
         <div class="card-content">
-          <p class="title">
+          <p class="title is-size-4">
             “Ser la mejor opción para nuestros clientes en sus proyectos
             inmobiliarios con calidad y el mejor trato hacia ellos resolviendo
             sus necesidades inmobiliarias con el mayor profesionalismo.”
           </p>
-          <p class="subtitle has-text-grey">
+          <p class="is-size-6 has-text-grey">
             Dahez Soluciones
           </p>
         </div>
@@ -121,3 +125,4 @@
     </div>
   </div>
 </div>
+<!-- End Main Content -->
