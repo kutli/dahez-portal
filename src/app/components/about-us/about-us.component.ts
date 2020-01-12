@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-about-us',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutUsComponent implements OnInit {
 
+  @ViewChild('modal', {static: false}) modal: ElementRef;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  toggleModal() {
+    this.modal.nativeElement.classList.toggle('is-active');
+  }
 }
