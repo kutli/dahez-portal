@@ -11,13 +11,15 @@ import { HomeComponent } from './components/home/home.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AboutUsComponent } from './components/about-us/about-us.component';
+import { NotFoundComponent } from './shared/not-found/not-found.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
     HomeComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
