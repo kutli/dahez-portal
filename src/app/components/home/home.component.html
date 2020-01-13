@@ -60,14 +60,14 @@
 </ngb-carousel>
 <!-- End Carousel -->
 
-<br/>
+<br />
 
-<!-- Begin Main Content -->
+<!-- Begin Quotes Section -->
 <div class="container">
+  <h1 class="title has-text-centered">Sobre Nosotros</h1>
+  <hr class="is-orange" />
+  <!-- Begin First Row -->
   <div class="has-text-right">
-    <h1 class="title has-text-centered">Sobre Nosotros</h1>
-    <hr class="is-orange">
-
     <div class="columns">
       <div class="card column is-one-third">
         <div class="card-image">
@@ -76,12 +76,13 @@
           </figure>
         </div>
       </div>
-      <div class="card column is-one-third">
+      <div class="column is-one-third">
         <div class="card-content">
-          <p class="title is-size-4">
-            “Dar el mejor servicio a nuestros clientes con la mas alta calidad y
+          <p class="is-size-4 has-text-weight-medium">
+            <span class="is-size-1 quotes">“</span>
+            Dar el mejor servicio a nuestros clientes con la mas alta calidad y
             garantía de trabajo resolviendo sus necesidades inmobiliarias o
-            proyectos.”
+            proyectos.<span class="is-size-1 quotes">”</span>
           </p>
           <p class="is-size-6 has-text-grey">
             Dahez Soluciones
@@ -90,19 +91,26 @@
       </div>
     </div>
   </div>
+  <!-- End First Row -->
 
-  <br />
+  <!-- Begin Redirect button -->
+  <div class="has-text-centered p-3">
+    <button class="button is-orange is-rounded" [routerLink]="['/about-us']">
+      Más sobre Nosotros
+    </button>
+  </div>
+  <!-- End Redirect button -->
 
+  <!-- Begin Second Row -->
   <div class="has-text-left">
-    <hr>
-
     <div class="columns ">
-      <div class="card column is-one-third is-offset-4">
+      <div class="column is-one-third is-offset-4">
         <div class="card-content">
-          <p class="title is-size-4">
-            “Ser la mejor opción para nuestros clientes en sus proyectos
-            inmobiliarios con calidad y el mejor trato hacia ellos resolviendo
-            sus necesidades inmobiliarias con el mayor profesionalismo.”
+          <p class="is-size-4 has-text-weight-medium">
+            <span class="is-size-1 quotes">“</span>Ser la mejor opción para
+            nuestros clientes en sus proyectos inmobiliarios con calidad y el
+            mejor trato hacia ellos resolviendo sus necesidades inmobiliarias
+            con el mayor profesionalismo.<span class="is-size-1 quotes">”</span>
           </p>
           <p class="is-size-6 has-text-grey">
             Dahez Soluciones
@@ -117,12 +125,72 @@
         </div>
       </div>
     </div>
+  </div>
+  <!-- Begin Second Row -->
+</div>
+<hr />
+<!-- End Quotes Section -->
 
-    <div class="has-text-centered p-3">
-      <button class="button is-orange is-rounded" [routerLink]="['/about-us']">
-        Más sobre Nosotros
-      </button>
+<!-- Begin Projects Section -->
+<div class="container">
+  <h1 class="title has-text-centered">Algunos Proyectos</h1>
+  <hr class="is-orange" />
+
+  <!-- Begin First Row -->
+  <div class="columns is-centered is-vcentered">
+    <div class="column is-one-third">
+      <div class="card">
+        <div class="card-image is-4by3">
+          <figure class="image">
+            <img src="assets/img/img5.jpg" alt="thumbnail image" />
+          </figure>
+        </div>
+      </div>
+    </div>
+    <div class="column is-one-third">
+      <div class="card-content">
+        <p class="is-size-4 has-text-weight-medium">Backyard Construction</p>
+        <p class="content is-size-5">
+          Here we'll have some projets to show how we manage construction,
+          situations... Show the quality of our work and our habilities to
+          manage how we are the perfect plan for you.
+        </p>
+      </div>
     </div>
   </div>
+  <!-- End First Row -->
+
+  <!-- Begin Redirect button -->
+  <div class="has-text-centered p-3">
+    <button class="button is-orange is-rounded" [routerLink]="['/projects']">
+      Más Proyectos
+    </button>
+  </div>
+  <!-- Begin Redirect button -->
+
+  <!-- Begin Second Row -->
+  <div class="columns is-centered is-vcentered">
+    <div class="column is-one-third">
+      <div class="card-content has-text-right">
+        <p class="is-size-4 has-text-weight-medium">Backyard Construction</p>
+        <p class="content is-size-5">
+          Here we'll have some projets to show how we manage construction,
+          situations... Show the quality of our work and our habilities to
+          manage how we are the perfect plan for you.
+        </p>
+      </div>
+    </div>
+    <div class="column is-one-third">
+      <div class="card">
+        <div class="card-image is-4by3">
+          <figure class="image">
+            <img src="assets/img/img6.jpg" alt="thumbnail image" />
+          </figure>
+        </div>
+      </div>
+    </div>
+    <!-- End Second Row -->
+  </div>
 </div>
-<!-- End Main Content -->
+<hr />
+<!-- End Projects Section -->
