@@ -1,0 +1,50 @@
+.card-image img {
+  width: auto;
+  height: auto;
+}
+
+.is-orange {
+    background-color: #fc7601;
+    color: white;
+}
+
+.quotes {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fc7601;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 20%;
+  left: 15%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: left;
+}
+
+.button.is-text {
+  text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  .carousel-caption p {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1rem;
+  }
+  .subtitle {
+    font-size: 0.7rem;
+  }
+}
+
+.title {
+  color: #fc7601;
+}

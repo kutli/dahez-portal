@@ -1,0 +1,196 @@
+<!-- 
+  activeId: The id of a slide which we want to display initially.
+  interval: Time in ms after which slide moves to next.
+  keyboard: To enable/ disable keyboard interaction, default is set to true.
+  pauseOnHover: Default is set to true, the carousel will stop on mouse hovers.
+  showNavigationArrows: Next and Previous arrow controls can be controlled by providing boolean value. Default is set to true.
+  showNavigationIndicators: Bottom indicators are controlled using this property. Default is set to true.
+  wrap: Property to loop over slides, default is set to true and show the first slide after last.
+-->
+<!-- Begin Carousel -->
+<ngb-carousel
+  [showNavigationArrows]="false"
+  [showNavigationIndicators]="false"
+  interval="5000"
+  [keyboard]="true"
+  [pauseOnHover]="true"
+  [wrap]="true"
+  [activeId]="'slideOne'"
+>
+  <ng-template ngbSlide id="slideOne">
+    <!-- <div class="picsum-img-wrapper"> -->
+    <figure class="image">
+      <img src="assets/img/img4.jpg" alt="Random first slide" />
+    </figure>
+    <!-- </div> -->
+    <div class="carousel-caption">
+      <h3 class="title has-text-white">
+        NEW AI-POWERED SOLAR ESTIMATOR CAN TRANSFORM HOME IMPROVEMENT SECTOR
+      </h3>
+      <p class="subtitle has-text-white-ter">
+        The tool measures individual roofs, determines roof plane directions,
+        and uses an algorithm to suggest appropriate areas for solar panels.
+      </p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide id="slideTwo">
+    <!-- <div class="picsum-img-wrapper"> -->
+    <figure class="image">
+      <img src="assets/img/img5.jpg" alt="Random second slide" />
+    </figure>
+    <!-- </div> -->
+    <div class="carousel-caption">
+      <h3 class="title has-text-white">Second slide label</h3>
+      <p class="subtitle has-text-white-ter">
+        Nulla vitae elit libero, a pharetra augue mollis interdum.
+      </p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide id="slideThree">
+    <figure class="image">
+      <img src="assets/img/img6.jpg" alt="Random third slide" />
+    </figure>
+    <div class="carousel-caption">
+      <h3 class="title has-text-white">Third slide label</h3>
+      <p class="subtitle has-text-white-ter">
+        Nulla vitae elit libero, a pharetra augue mollis interdum.
+      </p>
+    </div>
+  </ng-template>
+</ngb-carousel>
+<!-- End Carousel -->
+
+<br />
+
+<!-- Begin Quotes Section -->
+<div class="container">
+  <h1 class="title has-text-centered">Sobre Nosotros</h1>
+  <hr class="is-orange" />
+  <!-- Begin First Row -->
+  <div class="has-text-right">
+    <div class="columns">
+      <div class="card column is-one-third">
+        <div class="card-image">
+          <figure class="image">
+            <img src="assets/img/imgC.jpg" alt="Placeholder image" />
+          </figure>
+        </div>
+      </div>
+      <div class="column is-one-third">
+        <div class="card-content">
+          <p class="is-size-4 has-text-weight-medium">
+            <span class="is-size-1 quotes">“</span>
+            Dar el mejor servicio a nuestros clientes con la mas alta calidad y
+            garantía de trabajo resolviendo sus necesidades inmobiliarias o
+            proyectos.<span class="is-size-1 quotes">”</span>
+          </p>
+          <p class="is-size-6 has-text-grey">
+            Dahez Soluciones
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End First Row -->
+
+  <!-- Begin Redirect button -->
+  <div class="has-text-centered p-3">
+    <button class="button is-orange is-rounded" [routerLink]="['/about-us']">
+      Más sobre Nosotros
+    </button>
+  </div>
+  <!-- End Redirect button -->
+
+  <!-- Begin Second Row -->
+  <div class="has-text-left">
+    <div class="columns ">
+      <div class="column is-one-third is-offset-4">
+        <div class="card-content">
+          <p class="is-size-4 has-text-weight-medium">
+            <span class="is-size-1 quotes">“</span>Ser la mejor opción para
+            nuestros clientes en sus proyectos inmobiliarios con calidad y el
+            mejor trato hacia ellos resolviendo sus necesidades inmobiliarias
+            con el mayor profesionalismo.<span class="is-size-1 quotes">”</span>
+          </p>
+          <p class="is-size-6 has-text-grey">
+            Dahez Soluciones
+          </p>
+        </div>
+      </div>
+      <div class="card column is-one-third">
+        <div class="card-image">
+          <figure class="image">
+            <img src="assets/img/img1.jpg" alt="Placeholder image" />
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Begin Second Row -->
+</div>
+<hr />
+<!-- End Quotes Section -->
+
+<!-- Begin Projects Section -->
+<div class="container">
+  <h1 class="title has-text-centered">Algunos Proyectos</h1>
+  <hr class="is-orange" />
+
+  <!-- Begin First Row -->
+  <div class="columns is-centered is-vcentered">
+    <div class="column is-one-third">
+      <div class="card">
+        <div class="card-image is-4by3">
+          <figure class="image">
+            <img src="assets/img/img5.jpg" alt="thumbnail image" />
+          </figure>
+        </div>
+      </div>
+    </div>
+    <div class="column is-one-third">
+      <div class="card-content">
+        <p class="is-size-4 has-text-weight-medium">Backyard Construction</p>
+        <p class="content is-size-5">
+          Here we'll have some projets to show how we manage construction,
+          situations... Show the quality of our work and our habilities to
+          manage how we are the perfect plan for you.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- End First Row -->
+
+  <!-- Begin Redirect button -->
+  <div class="has-text-centered p-3">
+    <button class="button is-orange is-rounded" [routerLink]="['/projects']">
+      Más Proyectos
+    </button>
+  </div>
+  <!-- Begin Redirect button -->
+
+  <!-- Begin Second Row -->
+  <div class="columns is-centered is-vcentered">
+    <div class="column is-one-third">
+      <div class="card-content has-text-right">
+        <p class="is-size-4 has-text-weight-medium">Backyard Construction</p>
+        <p class="content is-size-5">
+          Here we'll have some projets to show how we manage construction,
+          situations... Show the quality of our work and our habilities to
+          manage how we are the perfect plan for you.
+        </p>
+      </div>
+    </div>
+    <div class="column is-one-third">
+      <div class="card">
+        <div class="card-image is-4by3">
+          <figure class="image">
+            <img src="assets/img/img6.jpg" alt="thumbnail image" />
+          </figure>
+        </div>
+      </div>
+    </div>
+    <!-- End Second Row -->
+  </div>
+</div>
+<hr />
+<!-- End Projects Section -->
