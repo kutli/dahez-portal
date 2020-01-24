@@ -21,55 +21,31 @@
 </section>
 <!-- End Main Hero -->
 
-<!-- Begin Mission Section -->
-<div class="container has-text-centered pt-5">
-  <h1 class="title is-size-2">Misión</h1>
-  <hr />
-</div>
-<section class="hero is-medium has-background">
-  <img
-    alt="Main picture"
-    class="hero-background is-transparent"
-    src="assets/img/img6.jpg"
-  />
-  <div class="hero-body">
-    <div class="container">
-      <p class="is-size-3 is-italic has-text-weight-bold">
-        Otorgar el mejor servicio a nuestros clientes
-      </p>
-      <p class="subtitle">
-        Con la mas alta calidad y garantía de trabajo resolviendo sus
-        necesidades inmobiliarias o proyectos.
-      </p>
-    </div>
+<!-- Begin Mission/Vission Section -->
+<ng-container *ngFor="let mision_vision of MISION_VISION">
+  <div class="container has-text-centered pt-5">
+    <h1 class="title is-size-2">{{ mision_vision.title }}</h1>
+    <hr />
   </div>
-</section>
+  <section class="hero is-medium has-background">
+    <img
+      alt="Main picture"
+      class="hero-background is-transparent"
+      [src]='mision_vision.img'
+    />
+    <div class="hero-body">
+      <div class="container" [ngClass]="{'has-text-right': mision_vision.isVision}">
+        <p class="is-size-3 is-italic has-text-weight-bold">
+          {{ mision_vision.container }}
+        </p>
+        <p class="subtitle">
+          {{ mision_vision.subtitle }}
+        </p>
+      </div>
+    </div>
+  </section>
+</ng-container>
 <!-- End Mission Hero -->
-
-<!-- Begin Vision Section -->
-<div class="container has-text-centered pt-5">
-  <h1 class="title is-size-2">Visión</h1>
-  <hr />
-</div>
-<section class="hero is-medium has-background">
-  <img
-    alt="Main picture"
-    class="hero-background is-transparent"
-    src="assets/img/img3.jpg"
-  />
-  <div class="hero-body">
-    <div class="container has-text-right">
-      <p class="is-size-3 is-italic has-text-weight-bold">
-        Ser la mejor opción para nuestros clientes
-      </p>
-      <p class="subtitle">
-        En sus proyectos inmobiliarios con calidad y el mejor trato hacia ellos
-        resolviendo sus necesidades inmobiliarias con el mayor profesionalismo.
-      </p>
-    </div>
-  </div>
-</section>
-<!-- End Vision Hero -->
 
 <!-- Begin Services Section -->
 <section class="section">
@@ -83,66 +59,21 @@
   <hr />
   <div class="container">
     <div class="columns is-centered">
-      <div class="card column is-one-quarter">
-        <div class="card-image">
-          <figure class="image is-4by3">
-            <img src="assets/img/imgC.jpg" alt="Construccion thumbnail image" />
-          </figure>
-        </div>
-        <div class="card-content">
-          <div class="media">
-            <h2 class="title is-4">Construcción</h2>
+      <ng-container *ngFor="let service of SERVICES">
+        <div class="card column is-one-quarter">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img [src]='service.img' [alt]='service.alt' />
+            </figure>
           </div>
-
-          <div class="content">
-            Desde la construcción de una barda hasta la construcción de una
-            residencia o local comercial en soluciones integrales dahez , vamos
-            de la mano con nuestros clientes para así crear una satisfacción
-            total en ellos, con la calidad y resultados deseados.
-            <br />
+          <div class="card-content">
+            <div class="media">
+              <h2 class="title is-5">{{ service.title }}</h2>
+            </div>
+            <div class="content">{{ service.content }}<br /></div>
           </div>
         </div>
-      </div>
-      <div class="card column is-one-quarter">
-        <div class="card-image">
-          <figure class="image is-4by3">
-            <img src="assets/img/img3.jpg" alt="Remodelación thumbnail image" />
-          </figure>
-        </div>
-        <div class="card-content">
-          <div class="media">
-            <h2 class="title is-4">Remodelación</h2>
-          </div>
-
-          <div class="content">
-            En soluciones integrales dahez, contamos con remodelaciones desde
-            una cocina, cuartos, fachadas hasta una casa habitación, oficinas,
-            etc.
-          </div>
-        </div>
-      </div>
-      <div class="card column is-one-quarter">
-        <div class="card-image">
-          <figure class="image is-4by3">
-            <img
-              src="assets/img/img2.jpg"
-              alt="Mantenimiento thumbnail image"
-            />
-          </figure>
-        </div>
-        <div class="card-content">
-          <div class="media">
-            <h2 class="title is-4">Mantenimiento</h2>
-          </div>
-
-          <div class="content">
-            Trabajamos con calidad, rapidez y compromiso. generando así una
-            satisfacción total , contando con el equipo necesario y personal
-            especializado, estando siempre a la vanguardia en el mantenimiento
-            de: residencias, oficinas, edificios, etc.
-          </div>
-        </div>
-      </div>
+      </ng-container>
     </div>
   </div>
 </section>
