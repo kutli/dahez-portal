@@ -12,7 +12,7 @@ export class AuthGuardService {
 
   constructor(private authService: AuthService,
               private router: Router) { }
-  
+
   canActivate(route: ActivatedRouteSnapshot): boolean | Observable<boolean> {
     const roles = route.data.roles;
     return this.authService.isLoged() ? this.hasRoles(roles) : this.handleRedirect();

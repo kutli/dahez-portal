@@ -12,7 +12,7 @@ export class PermissionDirective implements OnInit, OnDestroy {
               private viewContainer: ViewContainerRef,
               private authService: AuthService) { }
 
-  roles: Array<string>
+  roles: Array<string>;
   user: Subscription;
 
   @Input() set appPermission(roles: Array<string>) {

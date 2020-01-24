@@ -32,8 +32,8 @@ export class UtilFunctions {
 
     /**
      * Function to download a Blob it changes between IE and other navigators
-     * @param { Blob } blob Blob to be downloaded
-     * @param { string } name Name of the file
+     * @param blob Blob to be downloaded
+     * @param name Name of the file
      */
     public static downloadFile(blob: Blob, name: string) {
         if (navigator.msSaveBlob) {
@@ -45,8 +45,8 @@ export class UtilFunctions {
 
     /**
      * Function to use a Tag A to download a file
-     * @param { Blob } blob Blob to be downloaded
-     * @param { string } name Name of the file
+     * @param blob Blob to be downloaded
+     * @param name Name of the file
      */
     private static downloadWithATag(blob: Blob, name: string) {
         const link = document.createElement('a');
