@@ -1,3 +1,4 @@
+import { AuthModule } from './auth/auth.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -12,6 +13,10 @@ import { HomeComponent } from './components/home/home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { NotFoundComponent } from './shared/not-found/not-found.component';
+
+import { AuthInterceptor } from './auth/auth.interceptor';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { PermissionDirective } from './util/directives/permission.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,15 +24,20 @@ import { NotFoundComponent } from './shared/not-found/not-found.component';
     FooterComponent,
     HomeComponent,
     AboutUsComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    PermissionDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
-
+    NgbModule,
+    AuthModule
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
