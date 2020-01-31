@@ -68,7 +68,7 @@
   <hr class="is-orange" />
   <!-- Begin First Row -->
   <div class="has-text-right">
-    <div class="columns">
+    <div class="columns is-vcentered">
       <div class="column is-one-third">
         <div class="card-image">
           <figure class="image">
@@ -103,7 +103,7 @@
 
   <!-- Begin Second Row -->
   <div class="has-text-left">
-    <div class="columns ">
+    <div class="columns is-vcentered">
       <div class="column is-one-third is-offset-4">
         <div class="card-content">
           <p class="is-size-4 has-text-weight-medium">
@@ -135,33 +135,33 @@
 <div class="container">
   <h1 class="title has-text-centered">Algunos Proyectos</h1>
   <hr class="is-orange" />
-  <div class="is-centered">
-    <!-- Begin First Row -->
-    <div class="columns is-centered">
-      <div *ngFor="let item of dataList" class="column is-4">
+  <div class="container is-centered">
+    <!-- Begin First Column -->
+    <div class="grid columns is-vcentered">
+      <div *ngFor="let item of dataList" class="column">
+        <!-- Begin card -->
         <div class="card">
           <div class="card-image">
             <figure class="image is-3by2">
               <img src="assets/img/img3.jpg" alt="image alt" />
             </figure>
           </div>
-          <div class="card-content">
-            <div class="content tags">
-              <span
-                *ngFor="let tag of item.tags"
-                class="tag is-light is-rounded"
-                >{{ tag }}</span
-              >
-            </div>
+          <div class="card-content content">
+            <h3 class="is-title">
+              {{ item.title }}
+            </h3>
+            <hr />
+            <span
+              *ngFor="let tag of item.tags"
+              class="tag is-light is-rounded m-1"
+              >{{ tag }}</span
+            >
           </div>
         </div>
+        <!-- End card -->
       </div>
     </div>
-    <!-- End First Row -->
-
-    <!-- Begin Second Row -->
-
-    <!-- End Second Row -->
+    <!-- End First Column -->
   </div>
 
   <!-- Begin Redirect button -->

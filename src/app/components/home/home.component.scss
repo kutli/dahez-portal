@@ -27,10 +27,13 @@
   text-decoration: none;
 }
 
-.tags {
-  display: flex;
-  flex-wrap: 1;
-  justify-content: space-between;
+.title {
+  color: #fc7601;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
 }
 
 @media (max-width: 1024px) {
@@ -49,11 +52,9 @@
   .subtitle {
     font-size: 0.7rem;
   }
-  .tags {
+  .grid {
     display: block;
   }
+  
 }
 
-.title {
-  color: #fc7601;
-}

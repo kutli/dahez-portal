@@ -12,11 +12,14 @@ import { TagService } from '../../tag/tag.service';
 export class HomeComponent implements OnInit {
 
   dataList: any[] = [];
+  arr1: any[] = [];
 
   constructor(private contentService: ContentService) {
     this.contentService.getCards().subscribe((data: any) => {
       this.dataList = data.object;
     });
+    this.arr1 = this.dataList.slice(1, 2);
+    console.log(this.dataList);
   }
 
   ngOnInit() {

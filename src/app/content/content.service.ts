@@ -7,7 +7,6 @@ import { HttpClient } from '@angular/common/http';
 export class ContentService {
 
   constructor(private http: HttpClient) {
-    console.log('content service working');
   }
 
   getCards() {
