@@ -14,9 +14,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { NotFoundComponent } from './shared/not-found/not-found.component';
 
+// * Services
+import { ContentService } from './content/content.service';
+import { TagService } from './tag/tag.service';
+
+
 import { AuthInterceptor } from './auth/auth.interceptor';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { PermissionDirective } from './util/directives/permission.directive';
+import { HomeCardComponent } from './components/home-card/home-card.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,19 +31,23 @@ import { PermissionDirective } from './util/directives/permission.directive';
     HomeComponent,
     AboutUsComponent,
     NotFoundComponent,
-    PermissionDirective
+    PermissionDirective,
+    HomeCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    AuthModule
+    AuthModule,
+    HttpClientModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
     useClass: AuthInterceptor,
     multi: true
-  }],
+  }, ContentService,
+    TagService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

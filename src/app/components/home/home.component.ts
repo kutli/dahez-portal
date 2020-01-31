@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+//import { ContentService } from '../../content/content.service';
+import { TagService } from '../../tag/tag.service';
 
 @Component({
   selector: 'app-home',
@@ -9,9 +11,15 @@ import { Component, OnInit } from '@angular/core';
 
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  tags: any[] = [];
 
-  // images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
+  constructor(private tagService: TagService) {
+    this.tagService.getTags().subscribe( (data: any) => {
+      console.log(data.object);
+      this.tags = data.object;
+    });
+    //this.contentService.getCards();
+  }
 
   ngOnInit() {
   }
