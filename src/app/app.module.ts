@@ -22,7 +22,6 @@ import { TagService } from './tag/tag.service';
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { PermissionDirective } from './util/directives/permission.directive';
-import { HomeCardComponent } from './components/home-card/home-card.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,8 +30,7 @@ import { HomeCardComponent } from './components/home-card/home-card.component';
     HomeComponent,
     AboutUsComponent,
     NotFoundComponent,
-    PermissionDirective,
-    HomeCardComponent
+    PermissionDirective
   ],
   imports: [
     BrowserModule,

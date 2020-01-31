@@ -135,19 +135,32 @@
 <div class="container">
   <h1 class="title has-text-centered">Algunos Proyectos</h1>
   <hr class="is-orange" />
-  <div class="columns is-centered">
+  <div class="is-centered">
     <!-- Begin First Row -->
-    <div class="column is-4">
-      <app-home-card class="m-2"></app-home-card>
-      <app-home-card class="m-2"></app-home-card>
+    <div class="columns is-centered">
+      <div *ngFor="let item of dataList" class="column is-4">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-3by2">
+              <img src="assets/img/img3.jpg" alt="image alt" />
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content tags">
+              <span
+                *ngFor="let tag of item.tags"
+                class="tag is-light is-rounded"
+                >{{ tag }}</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- End First Row -->
 
     <!-- Begin Second Row -->
-    <div class="column is-4">
-      <app-home-card class="m-2"></app-home-card>
-      <app-home-card class="m-2"></app-home-card>
-    </div>
+
     <!-- End Second Row -->
   </div>
 

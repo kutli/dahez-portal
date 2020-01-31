@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-//import { ContentService } from '../../content/content.service';
+import { ContentService } from '../../content/content.service';
 import { TagService } from '../../tag/tag.service';
 
 @Component({
@@ -11,14 +11,12 @@ import { TagService } from '../../tag/tag.service';
 
 export class HomeComponent implements OnInit {
 
-  tags: any[] = [];
+  dataList: any[] = [];
 
-  constructor(private tagService: TagService) {
-    this.tagService.getTags().subscribe( (data: any) => {
-      console.log(data.object);
-      this.tags = data.object;
+  constructor(private contentService: ContentService) {
+    this.contentService.getCards().subscribe((data: any) => {
+      this.dataList = data.object;
     });
-    //this.contentService.getCards();
   }
 
   ngOnInit() {
