@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ContentService } from '../../content/content.service';
-import { TagService } from '../../tag/tag.service';
+import { Component, OnInit, ɵclearResolutionOfComponentResourcesQueue } from '@angular/core';
+import { ContentService } from '../content/content.service';
+import { Content } from '@angular/compiler/src/render3/r3_ast';
 
 @Component({
   selector: 'app-home',
@@ -11,18 +11,26 @@ import { TagService } from '../../tag/tag.service';
 
 export class HomeComponent implements OnInit {
 
-  dataList: any[] = [];
-  arr1: any[] = [];
+  contents: Content [];
 
   constructor(private contentService: ContentService) {
-    this.contentService.getCards().subscribe((data: any) => {
-      this.dataList = data.object;
-    });
-    this.arr1 = this.dataList.slice(1, 2);
-    console.log(this.dataList);
   }
 
   ngOnInit() {
+    this.getContentList();
+  }
+
+  /**
+   * Method used to get the random content
+   */
+  getContentList() {
+    this.contentService.getList()
+    .subscribe(
+      response => {
+        this.contents = response.object.slice(0, 4);
+      },
+      error => console.log(error)
+    );
   }
 
 }

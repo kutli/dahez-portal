@@ -15,8 +15,8 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { NotFoundComponent } from './shared/not-found/not-found.component';
 
 // * Services
-import { ContentService } from './content/content.service';
-import { TagService } from './tag/tag.service';
+import { ContentService } from './components/content/content.service';
+import { TagService } from './components/tag/tag.service';
 
 
 import { AuthInterceptor } from './auth/auth.interceptor';

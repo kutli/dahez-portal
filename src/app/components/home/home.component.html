@@ -138,7 +138,7 @@
   <div class="container is-centered cards-content">
     <!-- Begin First Column -->
     <div class="grid columns is-vcentered">
-      <div *ngFor="let item of dataList" class="column">
+      <div *ngFor="let item of contents" class="column">
         <!-- Begin card -->
         <div class="card">
           <div class="card-image">
@@ -154,7 +154,7 @@
             <span
               *ngFor="let tag of item.tags"
               class="tag is-light is-rounded m-1"
-              >{{ tag }}</span
+              > #{{ tag.name }}</span
             >
           </div>
         </div>

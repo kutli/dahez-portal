@@ -1,13 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { GenericService } from 'src/app/util/generics/generic.service';
+import { Tag } from './tag.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class TagService {
+export class TagService extends GenericService<Tag> {
 
-  constructor(private http: HttpClient) {
-
+  constructor(protected http: HttpClient) {
+    super(http, 'tag');
   }
 
   getTags() {
