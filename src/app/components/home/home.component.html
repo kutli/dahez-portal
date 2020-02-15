@@ -11,9 +11,9 @@
 <ngb-carousel
   [showNavigationArrows]="false"
   [showNavigationIndicators]="false"
-  interval="5000"
+  interval="2400"
   [keyboard]="true"
-  [pauseOnHover]="true"
+  [pauseOnHover]="false"
   [wrap]="true"
   [activeId]="'slideOne'"
 >
@@ -68,8 +68,8 @@
   <hr class="is-orange" />
   <!-- Begin First Row -->
   <div class="has-text-right">
-    <div class="columns">
-      <div class="card column is-one-third">
+    <div class="columns is-vcentered">
+      <div class="column is-one-third">
         <div class="card-image">
           <figure class="image">
             <img src="assets/img/imgC.jpg" alt="Placeholder image" />
@@ -103,7 +103,7 @@
 
   <!-- Begin Second Row -->
   <div class="has-text-left">
-    <div class="columns ">
+    <div class="columns is-vcentered">
       <div class="column is-one-third is-offset-4">
         <div class="card-content">
           <p class="is-size-4 has-text-weight-medium">
@@ -117,7 +117,7 @@
           </p>
         </div>
       </div>
-      <div class="card column is-one-third">
+      <div class="column is-one-third">
         <div class="card-image">
           <figure class="image">
             <img src="assets/img/img1.jpg" alt="Placeholder image" />
@@ -135,30 +135,34 @@
 <div class="container">
   <h1 class="title has-text-centered">Algunos Proyectos</h1>
   <hr class="is-orange" />
-
-  <!-- Begin First Row -->
-  <div class="columns is-centered is-vcentered">
-    <div class="column is-one-third">
-      <div class="card">
-        <div class="card-image is-4by3">
-          <figure class="image">
-            <img src="assets/img/img5.jpg" alt="thumbnail image" />
-          </figure>
+  <div class="container is-centered cards-content">
+    <!-- Begin First Column -->
+    <div class="grid columns is-vcentered">
+      <div *ngFor="let content of contents" class="column">
+        <!-- Begin card -->
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-3by2">
+              <img src="assets/img/img3.jpg" alt="image alt" />
+            </figure>
+          </div>
+          <div class="card-content content">
+            <h3 class="is-title">
+              {{ content.title }}
+            </h3>
+            <hr />
+            <span
+              *ngFor="let tag of content.tags"
+              class="tag is-light is-rounded m-1"
+              > #{{ tag.name }}</span
+            >
+          </div>
         </div>
+        <!-- End card -->
       </div>
     </div>
-    <div class="column is-one-third">
-      <div class="card-content">
-        <p class="is-size-4 has-text-weight-medium">Backyard Construction</p>
-        <p class="content is-size-5">
-          Here we'll have some projets to show how we manage construction,
-          situations... Show the quality of our work and our habilities to
-          manage how we are the perfect plan for you.
-        </p>
-      </div>
-    </div>
+    <!-- End First Column -->
   </div>
-  <!-- End First Row -->
 
   <!-- Begin Redirect button -->
   <div class="has-text-centered p-3">
@@ -167,30 +171,6 @@
     </button>
   </div>
   <!-- Begin Redirect button -->
-
-  <!-- Begin Second Row -->
-  <div class="columns is-centered is-vcentered">
-    <div class="column is-one-third">
-      <div class="card-content has-text-right">
-        <p class="is-size-4 has-text-weight-medium">Backyard Construction</p>
-        <p class="content is-size-5">
-          Here we'll have some projets to show how we manage construction,
-          situations... Show the quality of our work and our habilities to
-          manage how we are the perfect plan for you.
-        </p>
-      </div>
-    </div>
-    <div class="column is-one-third">
-      <div class="card">
-        <div class="card-image is-4by3">
-          <figure class="image">
-            <img src="assets/img/img6.jpg" alt="thumbnail image" />
-          </figure>
-        </div>
-      </div>
-    </div>
-    <!-- End Second Row -->
-  </div>
 </div>
 <hr />
 <!-- End Projects Section -->
