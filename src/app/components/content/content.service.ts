@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { GenericService } from 'src/app/util/generics/generic.service';
-import { Content } from '@angular/compiler/src/render3/r3_ast';
+import { Content } from '../content/content.model';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
 

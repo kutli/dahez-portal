@@ -1,6 +1,6 @@
 import { Component, OnInit, ɵclearResolutionOfComponentResourcesQueue } from '@angular/core';
 import { ContentService } from '../content/content.service';
-import { Content } from '@angular/compiler/src/render3/r3_ast';
+import { Content } from '../content/content.model';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +11,7 @@ import { Content } from '@angular/compiler/src/render3/r3_ast';
 
 export class HomeComponent implements OnInit {
 
-  contents: Content [];
+  contents = new Array<Content>();
 
   constructor(private contentService: ContentService) {
   }
@@ -24,11 +24,9 @@ export class HomeComponent implements OnInit {
    * Method used to get the random content
    */
   getContentList() {
-    this.contentService.getList()
+    this.contentService.getRandom()
     .subscribe(
-      response => {
-        this.contents = response.object.slice(0, 4);
-      },
+      response => this.contents = response,
       error => console.log(error)
     );
   }
