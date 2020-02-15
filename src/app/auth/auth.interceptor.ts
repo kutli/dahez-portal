@@ -49,17 +49,17 @@ export class AuthInterceptor implements HttpInterceptor {
     private handleAuthRequest(request: HttpRequest<any>, token: string): HttpRequest<any> {
         if (request.method === 'DELETE') {
             request = request.clone({
-                url:  `${environment.authUrl}${request.url}`,
+                url:  `${environment.apiUrl}${request.url}`,
                 headers: request.headers.set(this.GRANT_TYPE_AUTH,  `Bearer ${token}`)
             });
         } else if (request.url.match(/.*user.*/gm)) {
             request = request.clone({
-                url:  `${environment.authUrl}user`,
+                url:  `${environment.apiUrl}user`,
                 headers: request.headers.set(this.GRANT_TYPE_AUTH,  `Bearer ${token}`)
             });
         } else {
             request = request.clone({
-                url:  `${environment.authUrl}${request.url}`,
+                url:  `${environment.apiUrl}${request.url}`,
                 headers: request.headers.set(this.GRANT_TYPE_AUTH, this.basicToken)
             });
         }
@@ -77,7 +77,7 @@ export class AuthInterceptor implements HttpInterceptor {
             request = this.handleAuthRequest(request, token);
         } else if (token) {
             request = request.clone({
-                url:  `${environment.authUrl}${request.url}`,
+                url:  `${environment.apiUrl}${request.url}`,
                 headers: request.headers.set(this.GRANT_TYPE_AUTH,  `Bearer ${token}`)
             });
         }

@@ -33,11 +33,11 @@ import { PermissionDirective } from './util/directives/permission.directive';
     NgbModule,
     AuthModule
   ],
-  providers: [{
+/*  providers: [{
     provide: HTTP_INTERCEPTORS,
     useClass: AuthInterceptor,
     multi: true
-  }],
+  }],*/
   bootstrap: [AppComponent]
 })
 export class AppModule { }
