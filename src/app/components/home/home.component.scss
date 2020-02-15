@@ -27,12 +27,28 @@
   text-decoration: none;
 }
 
+.title {
+  color: #fc7601;
+}
+
+.cards-content {
+  max-width: 75%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+
 @media (max-width: 1024px) {
   .title {
     font-size: 1.5rem;
   }
   .carousel-caption p {
     display: none;
+  }
+  .cards-content {
+    max-width: 85%;
   }
 }
 
@@ -43,8 +59,12 @@
   .subtitle {
     font-size: 0.7rem;
   }
+  .grid {
+    display: block;
+  }
+  .cards-content {
+    max-width: 100%;
+  }
+  
 }
 
-.title {
-  color: #fc7601;
-}

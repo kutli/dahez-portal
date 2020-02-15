@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ɵclearResolutionOfComponentResourcesQueue } from '@angular/core';
+import { ContentService } from '../content/content.service';
+import { Content } from '../content/content.model';
 
 @Component({
   selector: 'app-home',
@@ -9,11 +11,24 @@ import { Component, OnInit } from '@angular/core';
 
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  contents = new Array<Content>();
 
-  // images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
+  constructor(private contentService: ContentService) {
+  }
 
   ngOnInit() {
+    this.getContentList();
+  }
+
+  /**
+   * Method used to get the random content
+   */
+  getContentList() {
+    this.contentService.getRandom()
+    .subscribe(
+      response => this.contents = response,
+      error => console.log(error)
+    );
   }
 
 }

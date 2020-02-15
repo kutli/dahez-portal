@@ -17,8 +17,4 @@ export class AboutUsComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  toggleModal() {
-    this.modal.nativeElement.classList.toggle('is-active');
-  }
 }
